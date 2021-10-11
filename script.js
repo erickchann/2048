@@ -3,6 +3,7 @@ const row2 = document.querySelectorAll('.row2');
 const row3 = document.querySelectorAll('.row3');
 const row4 = document.querySelectorAll('.row4');
 
+const modal = document.querySelector('.modal');
 const modalWin = document.querySelector('.modal-win');
 const modalOver = document.querySelector('.modal-over');
 
@@ -41,9 +42,10 @@ const dom = [
 ];
 
 
-window.onload = init();
 function init() {
-	bst.innerHTML = best
+	modal.classList.add('close');
+
+	bst.innerHTML = best;
 
 	addNumber();
 	addNumber();
