@@ -1,73 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>2048</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>2048</title>
 
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="modal">
+            <h1 class="title">2048</h1>
 
-	<div class="modal">
-		<h1 class="title">2048</h1>
+            <h3 class="title">HOW TO PLAY:</h3>
+            <p>
+                Use your arrow keys to move the tiles. Tiles with the same
+                number merge into one when they touch. Add them up to reach
+                2048!
+            </p>
 
-		<h3 class="title">HOW TO PLAY: </h3>
-		<p>Use your arrow keys to move the tiles. Tiles with the same number merge into one when they touch. Add them up to reach 2048!</p>
+            <button type="button" onclick="init()">Play</button>
+        </div>
 
-		<button type="button" onclick="init()">Play</button>
-	</div>
+        <div class="container">
+            <div class="info">
+                <div class="score">
+                    SCORE
+                    <span id="score">0</span>
+                </div>
 
-	<div class="container">
-		<div class="info">
-			<div class="score">
-				SCORE
-				<span id="score">0</span>
-			</div>
+                <div class="best">
+                    BEST
+                    <span id="best">0</span>
+                </div>
 
-			<div class="best">
-				BEST
-				<span id="best">0</span>
-			</div>
+                <button type="button" onclick="location.reload()">
+                    New Game
+                </button>
+            </div>
 
-			<button type="button" onclick="location.reload()">New Game</button>
-		</div>
+            <div id="game">
+                <div class="modal-over">
+                    <h2>Game Over</h2>
+                    <button type="button" onclick="location.reload()">
+                        New Game
+                    </button>
+                </div>
 
-		<div id="game">
-			<div class="modal-over">
-				<h2>Game Over</h2>
-				<button type="button" onclick="location.reload()">New Game</button>
-			</div>
+                <div class="modal-win">
+                    <h2>You Win</h2>
+                    <button type="button" onclick="this.parentElement.remove()">
+                        Continue Playing
+                    </button>
+                    <button type="button" onclick="location.reload()">
+                        New Game
+                    </button>
+                </div>
 
-			<div class="modal-win">
-				<h2>You Win</h2>
-				<button type="button" onclick="this.parentElement.remove()">Continue Playing</button>
-				<button type="button" onclick="location.reload()">New Game</button>
-			</div>
+                <div class="box row1"></div>
+                <div class="box row1"></div>
+                <div class="box row1"></div>
+                <div class="box row1"></div>
 
-			<div class="box row1"></div>
-			<div class="box row1"></div>
-			<div class="box row1"></div>
-			<div class="box row1"></div>
+                <div class="box row2"></div>
+                <div class="box row2"></div>
+                <div class="box row2"></div>
+                <div class="box row2"></div>
 
-			<div class="box row2"></div>
-			<div class="box row2"></div>
-			<div class="box row2"></div>
-			<div class="box row2"></div>
+                <div class="box row3"></div>
+                <div class="box row3"></div>
+                <div class="box row3"></div>
+                <div class="box row3"></div>
 
-			<div class="box row3"></div>
-			<div class="box row3"></div>
-			<div class="box row3"></div>
-			<div class="box row3"></div>
+                <div class="box row4"></div>
+                <div class="box row4"></div>
+                <div class="box row4"></div>
+                <div class="box row4"></div>
+            </div>
+        </div>
 
-			<div class="box row4"></div>
-			<div class="box row4"></div>
-			<div class="box row4"></div>
-			<div class="box row4"></div>
-		</div>
-	</div>
-
-<script src="script.js"></script>
-</body>
+        <div id="only-desktop-overlay">
+            <div>
+                <div class="icon">😔</div>
+                <h2 class="text">
+                    Sorry, this applcation not supported in mobile :(
+                </h2>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>

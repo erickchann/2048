@@ -1,175 +1,200 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-	height: 100%;
+    height: 100%;
 }
 
 body {
-	padding: 0;
-	margin: 0;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	background-color: #faf8ef;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: #faf8ef;
 }
 
 #game {
-	padding: 10px 15px;
-	width: 475px;
-	height: 475px;
-	background-color: #bbada0;
-	border-radius: 10px;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
-	position: relative;
+    padding: 10px 15px;
+    width: 475px;
+    height: 475px;
+    background-color: #bbada0;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
-.modal-over, .modal-win {
-	display: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, .5);
-	padding: 40px;
+.modal-over,
+.modal-win {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
 }
 
-.modal-over h2, .modal-win h2 {
-	text-align: center;
-	color: white;
-	font-size: 60px;
+.modal-over h2,
+.modal-win h2 {
+    text-align: center;
+    color: white;
+    font-size: 60px;
 }
 
 .modal-win button:nth-child(2) {
-	margin-bottom: 30px;
-	background-color: #bbada0;
+    margin-bottom: 30px;
+    background-color: #bbada0;
 }
 
-.modal-over button, .modal-win button {
-	padding: 20px;
-	margin-left: 0;
+.modal-over button,
+.modal-win button {
+    padding: 20px;
+    margin-left: 0;
 }
 
 .box {
-	width: 100px;
-	height: 100px;
-	border-radius: 5px;
-	background-color: #cdc1b4;
-	color: #776e65;
-	text-align: center;
-	line-height: 100px;
-	font-size: 40px;
-	font-weight: bold;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #cdc1b4;
+    color: #776e65;
+    text-align: center;
+    line-height: 100px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .info {
-	display: flex;
-	margin-bottom: 30px;
+    display: flex;
+    margin-bottom: 30px;
 }
 
 .score {
-	padding: 5px 30px;
-	width: fit-content;
-	color: white;
-	background-color: #bbada0;
-	text-align: center;
-	font-size: 12px;
-	border-radius: 5px;
+    padding: 5px 30px;
+    width: fit-content;
+    color: white;
+    background-color: #bbada0;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
 }
 
 .best {
-	padding: 5px 30px;
-	width: fit-content;
-	color: white;
-	background-color: #bbada0;
-	text-align: center;
-	font-size: 12px;
-	border-radius: 5px;
-	margin-left: 10px;
+    padding: 5px 30px;
+    width: fit-content;
+    color: white;
+    background-color: #bbada0;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-left: 10px;
 }
 
 button {
-	width: 100%;
-	border-radius: 5px;
-	border: none;
-	font-size: 20px;
-	font-weight: bold;
-	color: white;
-	cursor: pointer;
-	margin-left: 15px;
-	background-color: #8f7a66;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    margin-left: 15px;
+    background-color: #8f7a66;
 }
 
 span {
-	display: block;
-	font-size: 30px;
-	font-weight: bold;
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
 }
 
-
 .modal {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	z-index: 100;
-	background-color: rgba(255, 255, 255, .8);
-	transition: .3s;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
 }
 
 .modal > * {
-	animation: show .3s forwards;
+    animation: show 0.3s forwards;
 }
 
 .modal.close {
-	animation: close .3s ease-out forwards;
+    animation: close 0.3s ease-out forwards;
 }
 
 h1.title {
-	font-size: 4rem;
-	color: #776e65;
+    font-size: 4rem;
+    color: #776e65;
 }
 
 .modal p {
-	width: 40%;
-	text-align: center;
-	line-height: 2;
+    width: 40%;
+    text-align: center;
+    line-height: 2;
 }
 
 .modal button {
-	width: fit-content;
-	margin-top: 2rem;
-	padding: .5em 1em;
+    width: fit-content;
+    margin-top: 2rem;
+    padding: 0.5em 1em;
 }
 
 @keyframes show {
-	0% {
-		transform: scale(1.4);
-	}
+    0% {
+        transform: scale(1.4);
+    }
 
-	100% {
-		transform: scale(1);
-	}
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes close {
-	50% {
-		transform: scale(1.2);
-	}
+    50% {
+        transform: scale(1.2);
+    }
 
-	100% {
-		transform: scale(0);
-		display: none;
-	}
+    100% {
+        transform: scale(0);
+        display: none;
+    }
+}
+
+/* Only Desktop Overlay */
+#only-desktop-overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 1000000;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+#only-desktop-overlay .icon {
+    font-size: 30vw;
+}
+
+#only-desktop-overlay .text {
+    padding: 0 5vw;
 }
